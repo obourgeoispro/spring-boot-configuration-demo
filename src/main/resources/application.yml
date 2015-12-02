@@ -6,8 +6,14 @@ configuration-app:
   connection-request-timeout: 1000
 
 spring:
+  application:
+    name: demo
+  profiles:
+    include: native, local
+    active: native, local
   cloud:
     config:
+      profile: native
       server:
         native:
           search-locations: classpath:config/

@@ -1,7 +1,6 @@
 package com.example;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
-//import org.springframework.cloud.config.server.EnableConfigServer;
 import org.springframework.stereotype.Component;
 
 import javax.validation.constraints.Digits;
@@ -10,7 +9,6 @@ import java.net.URL;
 
 @Component
 @ConfigurationProperties(prefix = "configuration-app")
-//@EnableConfigServer
 public class ConfigurationApplicationSettings {
     @NotNull
     private URL apiUrl;

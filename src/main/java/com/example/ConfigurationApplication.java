@@ -15,7 +15,7 @@ public class ConfigurationApplication implements CommandLineRunner {
 
     @Override
     public void run(String... args) {
-        System.out.println(demoApplicationSettings.getApiUrl());
+        System.out.println(demoApplicationSettings.getApiKey());
     }
 
     public static void main(String[] args) {

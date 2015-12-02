@@ -1,0 +1,32 @@
+configuration-app:
+  api-url: http://localhost:8080/api
+  api-key: SECRET
+  api-user: testuser
+  connection-timeout: 1000
+  connection-request-timeout: 1000
+
+spring:
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: classpath:config/
+
+---
+
+configuration-app:
+  api-url: http://dev.apiserver.internal
+  api-key: SECRET
+  api-user: devuser
+  connection-timeout: 1000
+  connection-request-timeout: 1000
+
+spring:
+  profiles: development
+  server:
+    port: 8080
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://some-git-repo.com/configuration

@@ -3,7 +3,7 @@ configuration-app:
   api-key: '{cipher}da1013c5bc07e9bb8de82d082f72504f6852316080afeb89b46b7f54fcd320ab'
   api-user: testuser
   connection-timeout: 1000
-  connection-request-timeout: 1000
+  use-ssl: false
 
 spring:
   application:
@@ -25,12 +25,10 @@ configuration-app:
   api-key: '{cipher}6b1f0b44cdc617e89f9cd0be0c28e369ac161794004d8330a572650d52de151a517a3400fdc0aba5c5b7e5e60732ff0f'
   api-user: devuser
   connection-timeout: 1000
-  connection-request-timeout: 1000
+  use-ssl: true
 
 spring:
   profiles: development
-  server:
-    port: 8080
   cloud:
     config:
       server:

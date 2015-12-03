@@ -18,8 +18,7 @@ public class ConfigurationApplicationSettings {
     private String apiUser;
     @Digits(integer = 12, fraction = 0)
     private int connectionTimeout;
-    @Digits(integer = 12, fraction = 0)
-    private int connectionRequestTimeout;
+    private boolean useSSL;
 
     public URL getApiUrl() {
         return apiUrl;
@@ -53,21 +52,22 @@ public class ConfigurationApplicationSettings {
         this.connectionTimeout = connectionTimeout;
     }
 
-    public int getConnectionRequestTimeout() {
-        return connectionRequestTimeout;
+    public boolean isUseSSL() {
+        return useSSL;
     }
 
-    public void setConnectionRequestTimeout(int connectionRequestTimeout) {
-        this.connectionRequestTimeout = connectionRequestTimeout;
+    public void setUseSSL(boolean useSSL) {
+        this.useSSL = useSSL;
     }
 
     @Override
     public String toString() {
         return "ConfigurationApplicationSettings{" +
                 "apiUrl=" + apiUrl +
+                ", apiKey='" + apiKey + '\'' +
                 ", apiUser='" + apiUser + '\'' +
                 ", connectionTimeout=" + connectionTimeout +
-                ", connectionRequestTimeout=" + connectionRequestTimeout +
+                ", useSSL=" + useSSL +
                 '}';
     }
 }

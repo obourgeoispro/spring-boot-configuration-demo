@@ -1,5 +1,5 @@
 # spring-boot-configuration-demo
-Sample project for Spring Boot configuration
+Simple project showing Spring Boot configuration examples. 
 
 Run using Gradle:
 
